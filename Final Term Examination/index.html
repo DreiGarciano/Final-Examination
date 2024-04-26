@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Kenny Rogers</title>
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <nav class="navigation">
+            <img src="kennylogo1.jpg" alt="imissher" id="logo">
+            <ul>
+                <li><a href="#mainContent"><input type="button" value="Order Now" id="order"></a></li>
+                <li><a href="index.html" class="hypertext">About</a></li>
+                <li><a href="index.html" class="hypertext">Location</a></li>
+                <li><a href="index.html" class="hypertext">Developer Page</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="sidebar">
+        <button class="sidebar-btn" onclick="changeContent('content1')">PROMOS</button><br>
+        <button class="sidebar-btn" onclick="changeContent('content2')">SIDES</button>
+        <button class="sidebar-btn" onclick="changeContent('content3')">NEW PRODUCT EXTENSION</button>
+        <button class="sidebar-btn" onclick="changeContent('content4')">FIZZY LEMONADES</button>
+        <button class="sidebar-btn" onclick="changeContent('content5')">CHILLERS</button>
+        <button class="sidebar-btn" onclick="changeContent('content6')">GLAZED CAKE BITES</button>
+        <button class="sidebar-btn" onclick="changeContent('content7')">FEATURED DOUGHNUTS</button>
+        <button class="sidebar-btn" onclick="changeContent('content8')">SPECIAL</button>
+        <div id="cart">
+            <h1>Cart</h1>
+            <hr>
+            <ul id="cart-items"></ul>
+            <hr>
+            <p>Total<h2><span id="cart-total">0.00</span></h2></p>
+        </div>
+    </div>
+
+    <div id="mainContent" class="order-box">
+        <h1 class="h1-header1">SPECIAL</h1>
+        <div class="donut-containers">
+            <div class="promo" id="product1">
+                <img src="custard1.jpeg" alt="1stpromo" class="image-container">
+                <p>Custard Filled Doughnut</p>
+                <p style="color:red">Php 75.00</p>
+                <button class="btn-container" onclick="addToCart('Custard Filled Doughnut', 75.00)">ORDER NOW</button>
+            </div>
+            <div class="promo" id="product2">
+                <img src="matcha1.webp" alt="2ndpromo" class="image-container">
+                <p>Matcha and Pistachio Milktea</p>
+                <P style="color: red">Php 120.00</P>
+                <button class="btn-container" onclick="addToCart('Matcha and Pistachio Milktea', 120.00)">ORDER NOW</button>
+            </div>
+            <div class="promo" id="product3">
+                <img src="cherry1.jpg" alt="3rdpromo" class="image-container"><br>
+                <p>Cherry Filled Doughnut</p>
+                <p style="color: red">Php 75.00</p>
+                <button class="btn-container" onclick="addToCart('Cherry Filled Doughnut', 75.00)">ORDER NOW</button>
+            </div>
+        </div> 
+    </div>
+
+    <div id="content1" style="display: none;" class="order-box">
+        <div class="h1-header"><h1>PROMOS</h1></div>
+        <div class="donut-containers">
+        <div class="promo" id="product4">
+            <img src="Promos1.jpg" alt="1stpromo" class="image-container" >
+            <p>Original Glazed Donuts</p>
+            <p style="color:red">Php 449.00</p>
+            <button class="btn-container" onclick="addToCart('Original Glazed Donuts', 449.00)">ORDER NOW</button>
+        </div>
+        <div class="promo" id="product5">
+            <img src="Promos2.jpg" alt="2ndpromo" class="image-container">
+            <p>OG CARD BUNDLE</p>
+            <P style="color: red">Php 599.00</P>
+            <button class="btn-container" onclick="addToCart('OG CARD BUNDLE', 599.00)">ORDER NOW</button>
+        </div>
+        <div class="promo" id="product6">
+            <img src="Promos3.jpg" alt="3rdpromo" class="image-container"><br>
+            <p>SIGNATURE ICED MOCHA</p>
+            <p style="color: red">Php 130.00</p>
+            <button class="btn-container" onclick="addToCart('SIGNATURE ICED MOCHA', 130.00)">ORDER NOW</button>
+        </div>
+
+        </div>
+    </div>
+    <div id="content2" style="display: none;" class="order-box">
+        <div class="h1-header"><h1>NEW ORIGINAL CREATIONS</h1></div>
+        <div class="donut-containers">
+            <div class="promo" id="product7">
+                <img src="original1.jpg" alt="1stpromo" class="image-container">
+                <p>Sea Salt Kreme Matcha Latte</p>
+                <p style="color:red">Php 190.00</p>
+                <button class="btn-container" onclick="addToCart('Sea Salt Kreme Matcha Latte', 190.00)">ORDER NOW</button>
+            </div>
+            <div class="promo" id="product8">
+                <img src="original1.jpg" alt="2ndpromo" class="image-container">
+                <p>Choco Hazelnut Filler</p>
+                <P style="color: red">Php 215.00</P>
+                <button class="btn-container" onclick="addToCart('Choco Hazelnut Filler', 215.00)">ORDER NOW</button>
+            </div>
+            <div class="promo" id="product9">
+                <img src="original1.jpg" alt="3rdpromo" class="image-container"><br>
+                <p>Lotus Biscoff Chiller</p>
+                <p style="color: red">Php 225.00</p>
+                <button class="btn-container" onclick="addToCart('Lotus Biscoff Chiller', 225.00)">ORDER NOW</button>
+            </div>
+    </div>
+
+    <div id="content3" style="display: none;" class="order-box">
+        <div class="h1-header"><h1>CHEESE-FILLED DOUGH-SNACKS</h1></div>
+        <div class="donut-containers">
+            <div class="promo" id="product10">
+                <img src="cheese1.jpg" alt="1stpromo" class="image-container">
+                <p>Box of 6 Cheese-filled<br>Dough Snacks</p>
+                <p style="color:red">Php 190.00</p>
+                <button class="btn-container" onclick="addToCart('Box of 6 Cheese-filled Dough Snacks', 190.00)">ORDER NOW</button>
+            </div>
+            <div class="promo" id="product11">
+                <img src="cheese2.jpg" alt="2ndpromo" class="image-container">
+                <p>Box of 6 Mixed Cheese-<br>filled Dough Snacks</p>
+                <P style="color: red">Php 215.00</P>
+                <button class="btn-container" onclick="addToCart('Box of 6 Mixed Cheese-filled Dough Snacks', 215.00)">ORDER NOW</button>
+            </div>
+            <div class="promo" id="product12">
+                <img src="cheese3.jpg" alt="3rdpromo" class="image-container"><br>
+                <p>Dozen Cheese-Filled Dough-<br>Snacks</p>
+                <p style="color: red">Php 225.00</p>
+                <button class="btn-container" onclick="addToCart('Dozen Cheese-filled Dough Snacks', 225.00)">ORDER NOW</button>
+            </div>
+            <div class="promo" id="product13">
+                <img src="cheese4.jpg" alt="3rdpromo" class="image-container"><br>
+                <p>Mixed Dozen Cheese-filled<br>Dough Snacks</p>
+                <p style="color: red">Php 225.00</p>
+                <button class="btn-container" onclick="addToCart('Mixed Dozen Cheese-filled Dough Snacks', 225.00)">ORDER NOW</button>
+            </div>
+    </div>
+    <div id="content4" style="display: none;" class="order-box">
+        <div class="h1-header"><h1>FIZZY LEMONADES</h1></div>
+        <div class="donut-containers">
+            <div class="promo" id="product14">
+                <img src="fizzy1.jpg" alt="1stpromo" class="image-container">
+                <p>Fizzy Original Lemonade</p>
+                <p style="color:red">Php 115.00</p>
+                <button class="btn-container" onclick="addToCart('Fizzy Original Lemonade', 115.00)">ORDER NOW</button>
+            </div>
+            <div class="promo" id="product15">
+                <img src="fizzy2.jpg" alt="2ndpromo" class="image-container">
+                <p>Fizzy Strawberry Lemonade</p>
+                <P style="color: red">Php 125.00</P>
+                <button class="btn-container" onclick="addToCart('Fizzy Strawberry Lemonade', 125.00)">ORDER NOW</button>
+            </div>
+    </div>
+    </div>
+    <div id="content5" style="display: none;" class="order-box">
+        <div class="h1-header"><h1>CHILLLERS</h1></div>
+        <div class="donut-containers">
+            <div class="promo" id="product16">
+                <img src="chiller1.jpg" alt="1stpromo" class="image-container">
+                <p>Mocha Latte Chiller</p>
+                <p style="color:red">Php 179.00</p>
+                <button class="btn-container" onclick="addToCart('Mocha Latte Chiller', 179.00)">ORDER NOW</button>
+            </div>
+            <div class="promo" id="product17">
+                <img src="chiller2.jpg" alt="2ndpromo" class="image-container">
+                <p>Cookies & Kreme Chiller</p>
+                <P style="color: red">Php 179.00</P>
+                <button class="btn-container" onclick="addToCart('Cookies & Kreme Chiller', 179.00)">ORDER NOW</button>
+            </div>
+            <div class="promo" id="product18">
+                <img src="chiller3.jpg" alt="3rdpromo" class="image-container"><br>
+                <p>Strawberry Kreme Chiller</p>
+                <p style="color: red">Php 179.00</p>
+                <button class="btn-container" onclick="addToCart('Strawberry Kreme Chiller', 179.00)">ORDER NOW</button>
+            </div>
+        </div>
+    </div>
+    <div id="content6" style="display: none;" class="order-box">
+        <div class="h1-header"><h1>GLAZED CAKE BITES</h1></div>
+        <div class="donut-containers">
+            <div class="promo" id="product19">
+                <img src="glazed1.jpg" alt="1stpromo" class="image-container">
+                <p>Cup of 8 Glazed Cake Bites</p>
+                <p style="color:red">Php 105.00</p>
+                <button class="btn-container" onclick="addToCart('Cup of 8 Glazed Cake Bites', 105.00)">ORDER NOW</button>
+            </div>
+            <div class="promo" id="product20">
+                <img src="glazed2.jpg" alt="2ndpromo" class="image-container">
+                <p>Bucket Glazed Cake Bites</p>
+                <P style="color: red">Php 339.00</P>
+                <button class="btn-container" onclick="addToCart('Bucket Glazed Cake Bites', 339.00)">ORDER NOW</button>
+            </div>
+    </div>
+    <div id="content7" style="display: none;" class="order-box">
+        <div class="h1-header"><h1>FEATURED DOUGHNUTS</h1></div>
+        <div class="donut-containers">
+            <div class="promo" id="product21">
+                <img src="featured1.jpg" alt="1stpromo" class="image-container">
+                <p>One Dozen Original Glazed<br>Doughnuts</p>
+                <p style="color:red">Php 179.00</p>
+                <button class="btn-container" onclick="addToCart('One Dozen Original Glazed Doughnuts', 179.00)">ORDER NOW</button>
+            </div>
+            <div class="promo" id="product22">
+                <img src="featured2.jpg" alt="2ndpromo" class="image-container">
+                <p>One Dozen Mixed<br>Doughnuts</p>
+                <P style="color: red">Php 179.00</P>
+                <button class="btn-container" onclick="addToCart('One Dozen Mixed Doughnuts', 179.00)">ORDER NOW</button>
+            </div>
+            <div class="promo" id="product23">
+                <img src="featured3.jpg" alt="3rdpromo" class="image-container"><br>
+                <p>One Dozen Mixed Assorted<br>Doughnuts</p>
+                <p style="color: red">Php 179.00</p>
+                <button class="btn-container" onclick="addToCart('One Dozen Mixed Assorted Doughnuts', 179.00)">ORDER NOW</button>
+            </div>
+        </div>  
+    </div>
+    <div id="content8" style="display: none;" class="order-box">
+        <div class="h1-header"><h1>SPECIAL</h1></div>
+        <div class="donut-containers">
+            <div class="promo" id="product24">
+                <img src="custard1.jpeg" alt="1stpromo" class="image-container">
+                <p>Custard Filled Doughnut</p>
+                <p style="color:red">Php 75.00</p>
+                <button class="btn-container" onclick="addToCart('Custard Filled Doughnut', 75.00)">ORDER NOW</button>
+            </div>
+            <div class="promo" id="product25">
+                <img src="matcha1.webp" alt="2ndpromo" class="image-container">
+                <p>Matcha and Pistachio Milktea</p>
+                <P style="color: red">Php 120.00</P>
+                <button class="btn-container" onclick="addToCart('Matcha and Pistachio Milktea', 120.00)">ORDER NOW</button>
+            </div>
+            <div class="promo" id="product26">
+                <img src="cherry1.jpg" alt="3rdpromo" class="image-container"><br>
+                <p>Cherry Filled Doughnut</p>
+                <p style="color: red">Php 75.00</p>
+                <button class="btn-container" onclick="addToCart('Cherry Filled Doughnut', 75.00)">ORDER NOW</button>
+            </div>
+        </div> 
+    </div>
+</body>
+</html>
